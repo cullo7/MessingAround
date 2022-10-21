@@ -1,1 +1,3 @@
-Original add
+Original add 2
+
+added to staged file
