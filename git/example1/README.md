@@ -26,7 +26,7 @@ Conclusion 1.3: git add -u worked as expected, it stage the newly made file
 
 Example1.4: git add . doesn't stage removed files [TRUE/FALSE]
 
-Conclusion1.4
+Conclusion1.4: FALSE, it does
 
 Example1.5: git add -a doesn't add changes from higher directories (but git add -A does)
 
@@ -38,7 +38,7 @@ Procedure:
 5.	run `git add .` in higher_dir/lower_dir/
 6.	run `git add -A` in higher_dir/lower_dir/
 
-Conclusion1.5
+Conclusion1.5: Hypothesis is correct, git add . Doesn't add changes in higher directories
 
 Sources:
 
