@@ -11,7 +11,7 @@ Conclusion 1.1:   git add seemed to work as git add -u as well, perhaps they've 
 
 Example 1.2: redo Example 1.1
 
-Conclusion 1.2
+Conclusion 1.2:
 
 Example 1.3: testing git -u
 
@@ -22,5 +22,5 @@ Procedure:
 4.	commit
 5.	push
 
-Conclusion 1.3
+Conclusion 1.3: git add -u worked as expected, it stage the newly made file
 
