@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 trying again commit 2
+=======
+testing git reset
+commit 1
+commit 2
+>>>>>>> e847efe0c162ae4eac3ce58c0edf9ddde99cf9c2
