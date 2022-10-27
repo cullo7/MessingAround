@@ -1,5 +1,5 @@
 target	:= output
-objs	:= main.o
+objs	:= main.o functions.o
 
 CPP	:= gcc
 CFLGAS	:= -Wall -Werror -Wformat
