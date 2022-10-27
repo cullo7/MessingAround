@@ -4,6 +4,7 @@
     <title> Classic Screensaver JS </title>
   </head>
   <body>
+
     <script type = "text/javascript">
       var ball = document.createElement("img");
       document.body.appendChild(ball);
@@ -18,17 +19,14 @@
       var boundY = window.innerHeight;
 
       var speed = 10;
+      function fun () {
+          var posX = ball.offsetLeft;
+          var posY = ball.offsetTop;
 
-      function screensaver () {
-	  var posX = ball.offsetLeft;
-	  var posY = ball.offsetTop;
-
-	  ball.style.left = ball.x +  speed + 'px';
-	  ball.style.top = ball.y + speed + 'px';
+          ball.style.left = posX +  speed + 'px';
+          ball.style.top = posY + speed + 'px';
       }
-      window.setInterval(screensaver, 20);
-
-//      screensaver();
+      setInterval(fun, 1000);
     </script>
   </body>
 </html>
