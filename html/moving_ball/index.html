@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title> Classic Screensaver JS </title>
+  </head>
+  <body>
+    <script type = "text/javascript">
+      var ball = document.createElement("img");
+      document.body.appendChild(ball);
+      ball.src = "jones.png";
+      ball.style.width = "80px";
+      ball.style.left = "0px";
+      ball.style.top = "0px";
+
+      ball.style.position = "absolute";
+
+      var boundX = window.innerWidth;
+      var boundY = window.innerHeight;
+
+      var speed = 10;
+
+      function screensaver () {
+	  var posX = ball.offsetLeft;
+	  var posY = ball.offsetTop;
+
+	  ball.style.left = ball.x +  speed + 'px';
+	  ball.style.top = ball.y + speed + 'px';
+      }
+      window.setInterval(screensaver, 20);
+
+//      screensaver();
+    </script>
+  </body>
+</html>
