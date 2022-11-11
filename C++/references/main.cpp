@@ -16,10 +16,22 @@ class Node {
 
 public:
   Node* next;
+  int count;
 
   Node(){
     next = nullptr;
     std::cout << "default constructor" << std::endl;
+    count = 0;
+  }
+
+  Node(int a){
+
+    count = a;
+
+  }
+  
+  void increment(){
+    count++;
   }
 
 };
@@ -37,7 +49,7 @@ void recurse(Ref r, Node* n){
 }
 
 
-void Add5Nodes(Node* head){
+void Add5Nodes(Node*& head){
 
   for(int i = 0; i < 5; i++){
     Node* n = new Node();
@@ -45,6 +57,12 @@ void Add5Nodes(Node* head){
     head = n;
   }
 
+}
+
+void AddNode(Node*& head){
+  Node* newptr = new Node();
+  newptr->next = head;
+  head = newptr;
 }
 
 void FreeAllNodes(Node* head){
@@ -65,19 +83,22 @@ void ListSize(Node* ptr){
   std::cout << "size of list: " << size <<  std::endl;
 }
   
-void test(Ref *refptr){
-  refptr->counter++;
+void printVals(Node* ptr){
+  while(ptr){
+    std::cout << "ptr->count " << ptr->count <<std::endl;
+    ptr = ptr->next;
+  }
 }
 
 int main(){
 
   Ref ref;
   Node* headptr = new Node();
-  printf("%p\n", headptr);
   Add5Nodes(headptr);
   ListSize(headptr);
-  printf("%p\n", headptr);
-  recurse(ref, headptr);
+  //  recurse(ref, headptr);
   delete headptr;
   return 0;
+
+
 }
