@@ -1,0 +1,25 @@
+\documentclass{article}
+
+\usepackage{bibentry}
+\nobibliography*
+
+\begin{document}
+
+\section{Introduction}
+
+Look ma, inline bibtex entries:
+
+\begin{itemize}
+\item \bibentry{michael}
+\item \bibentry{elvis}
+\end{itemize}
+
+\section{And now for something completely different}
+Lorem ipsum yada yada,
+also see \cite{britney}, 
+yada yada, and \cite{marilyn} too.
+
+\bibliographystyle{alpha}
+\bibliography{test_bibentry.bib}
+
+\end{document}
