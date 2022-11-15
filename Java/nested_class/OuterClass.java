@@ -5,8 +5,10 @@ class OuterClass {
 
     public void accessMembers(){
 
-	System.out.println(innerStaticField);
-	System.out.println(innerField);
+	StaticInnerClass sic = new StaticInnerClass();
+
+	System.out.println(sic.innerStaticField);
+	//System.out.println(InnerClass.innerField);
 
     }
     
@@ -35,7 +37,8 @@ class OuterClass {
 
 	public void accessMembers(){
 
-	    System.out.println(outerField);
+	    // error accessing non-static var referenced from stat context
+	    //System.out.println(outerField);
 	    System.out.println(staticOuterField);
 
 	}   
@@ -50,13 +53,12 @@ class OuterClass {
 
 
 	//InnerClass testing
-	InnerClass innerclass =  new InnerClass();
+	OuterClass.InnerClass innerclass =  outerclass.new InnerClass();
 	innerclass.accessMembers();
 	
 	//StaticInnerClass testing
 	StaticInnerClass staticinnerclass = new StaticInnerClass();
 	staticinnerclass.accessMembers();
-	
 	
     }
 }
